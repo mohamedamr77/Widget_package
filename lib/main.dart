@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:newpackage/widget_flutter/drop_down_menu.dart';
 import 'package:newpackage/widget_flutter/show_model_bottom_sheet.dart';
 
+import 'widget_flutter/preferred_size.dart';
+
 
 void main(){
   runApp(MyApp());
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:CustomDropdown(),
+      home:CustomPreferredSize(),
     );
   }
 
