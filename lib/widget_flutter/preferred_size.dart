@@ -9,7 +9,7 @@ class CustomPreferredSize extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize:Size.fromHeight(80),
         child: Container(
-          height: 110,
+         height: 110,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
