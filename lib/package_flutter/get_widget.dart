@@ -43,8 +43,11 @@ class _Custom_Get_WidgetState extends State<Custom_Get_Widget> {
                 ],
               ),
             ),
-           GFIconButton(icon: Icon(Icons.abc), onPressed: (){}), GFToggle(onChanged: (value){}, value: true,
-            type:GFToggleType.square,
+           GFIconButton(
+               icon: Icon(Icons.abc), onPressed: (){}),
+            GFToggle(onChanged: (value){},
+              value: true,
+             type:GFToggleType.ios,
             ),
             GFRating(onChanged: (rating){}, value: 1,
 
@@ -64,6 +67,7 @@ class _Custom_Get_WidgetState extends State<Custom_Get_Widget> {
               //size: GFSize.LARGE,
               type: GFButtonType.outline,
             ),
+
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: TextFormField(
@@ -79,7 +83,6 @@ class _Custom_Get_WidgetState extends State<Custom_Get_Widget> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: GFProgressBar(
-
                   percentage: change_value ,
                   backgroundColor : Colors.black26,
                   progressBarColor: GFColors.DANGER,
@@ -94,7 +97,6 @@ class _Custom_Get_WidgetState extends State<Custom_Get_Widget> {
                   animation:true,
                  trailing:  Icon(Icons.sentiment_satisfied_alt,
                   color: Colors.red,
-
                 ),
                 child: Center(
                   child: Text("${(change_value * 100).toStringAsFixed(0)}%",
@@ -129,9 +131,6 @@ class _Custom_Get_WidgetState extends State<Custom_Get_Widget> {
               ),
 
             ),
-
-
-
           ],
         ),
       ),

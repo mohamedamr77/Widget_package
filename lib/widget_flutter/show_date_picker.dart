@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomShowDatePicker extends StatefulWidget {
-   CustomShowDatePicker({super.key});
+   const CustomShowDatePicker({super.key});
 
   @override
   State<CustomShowDatePicker> createState() => _CustomShowDatePickerState();
@@ -18,7 +18,7 @@ class _CustomShowDatePickerState extends State<CustomShowDatePicker> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text("${_dateTime.day} - ${_dateTime.month} - ${_dateTime.year}",
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 30,
             ),
             ),
@@ -27,7 +27,7 @@ class _CustomShowDatePickerState extends State<CustomShowDatePicker> {
                   DateTime? _newDate=await showDatePicker(
                       context: context,
                       initialDate: _dateTime,
-                      firstDate: DateTime(1950),
+                      firstDate: DateTime(2000),
                       lastDate: DateTime(2025),
                   ) ;
                   if(_newDate!=null){

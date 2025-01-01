@@ -12,46 +12,50 @@ class _CustomStepperWidgetState extends State<CustomStepperWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:Center(
-        child: Stepper(
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Stepper(
+            steps: [
+                 Step(
+                     title: Text("نصيحه 1"),
+                     content: Align(
+                         alignment: Alignment.centerRight,
+                         child: Text("تقسيم الوجبات على مدار اليوم مثلا وجبة الغداء لاتتناولها على مرة واحدة (لاتتناولها حتى تشبع)بل تناولها على عدة مرات.",textAlign: TextAlign.right,textDirection: TextDirection.rtl,))),
+                 Step(
+                  title: Text("Step 2"),
+                  content: Text("Information for Step 2")),
+                 Step(
+                  title: Text("Step 3"),
+                  content: Text("Information for Step 2")),
+                 Step(
+                  title: Text("Step 4"),
+                  content: Text("Information for Step 4")),
+          ],
 
-          steps: [
-               Step(
-                   title: Text("Step 1"),
-                   content: Text("Information for Step 1")),
-               Step(
-                title: Text("Step 2"),
-                content: Text("Information for Step 2")),
-               Step(
-                title: Text("Step 3"),
-                content: Text("Information for Step 2")),
-               Step(
-                title: Text("Step 4"),
-                content: Text("Information for Step 4")),
-        ],
-
-          onStepTapped: (int index){
-            setState(() {
-              currentstep=index;
-            });
-          },
-
-          currentStep: currentstep,
-
-          onStepContinue: (){
-            if (currentstep!=3){
+            onStepTapped: (int index){
               setState(() {
-                currentstep++;
+                currentstep=index;
               });
-            }
-          },
+            },
 
-          onStepCancel: (){
-            if(currentstep!=0){
-              setState(() {
-                currentstep-=1;
-              });
-            }
-          },
+            currentStep: currentstep,
+
+            onStepContinue: (){
+              if (currentstep!=3){
+                setState(() {
+                  currentstep++;
+                });
+              }
+            },
+
+            onStepCancel: (){
+              if(currentstep!=0){
+                setState(() {
+                  currentstep-=1;
+                });
+              }
+            },
+          ),
         ),
       ) ,
     );

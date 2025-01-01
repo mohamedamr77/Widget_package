@@ -18,7 +18,6 @@ class CustomSliverAppBar extends StatelessWidget {
               title: Text("Amr"),
               centerTitle: true,
             ),
-
           ),
           SliverList(delegate: SliverChildListDelegate(
             [

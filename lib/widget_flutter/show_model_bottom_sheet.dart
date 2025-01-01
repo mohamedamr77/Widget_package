@@ -11,7 +11,7 @@ class CustomShowModelBottomSheet extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {
              showModalBottomSheet(
-               shape: RoundedRectangleBorder(
+               shape: const RoundedRectangleBorder(
                borderRadius: BorderRadius.vertical(
                  top: Radius.circular(20.0),
                )
@@ -25,7 +25,7 @@ class CustomShowModelBottomSheet extends StatelessWidget {
                          onPressed: () {
                            Navigator.of(context).pop();
                          },
-                         child: Text('Close'),
+                         child: const Text('Close'),
                        ),
                      ),
                    );

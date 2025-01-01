@@ -7,12 +7,13 @@ class CustomExpansionTile extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(),
       body: ExpansionTile(
+        controlAffinity: ListTileControlAffinity.leading,
         title: Text("see more"),
         children: [
           ListTile(
-          onTap: (){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => OnePage(),));
-    },
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => OnePage(),));
+            },
             title: Text("First"),
           ),
           ListTile(
